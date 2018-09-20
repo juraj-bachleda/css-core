@@ -1,0 +1,36 @@
+$output: 'base' !default;
+//----------------------------------------
+// Colors
+//----------------------------------------
+$white: white;
+$gray: gray;
+$black: black;
+$green: green;
+$yellow: yellow;
+$blue: blue;
+$red: red;
+//---------------------
+// Typo
+//---------------------
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default; //16px
+$line-height: 1.4 !default;
+$font-family: 'Roboto',Arial,sans-serif !default;
+$light: 300 !default;
+$regular: 400 !default;
+$bold: 700 !default;
+//---------------------
+// Breakpoints
+//---------------------
+$screen-xs: 0 !default; //mobile first
+$screen-sm: 30em !default; //480px
+$screen-md: 60em !default; //960px
+$screen-lg: 90em !default; //1440px
+//---------------------
+// Spacing
+//---------------------
+$base-space: 0.5rem !default; //8px
+//---------------------
+// Transition
+//---------------------
+$transition-timing: cubic-bezier(0.250, 0.460, 0.450, 0.940) !default;

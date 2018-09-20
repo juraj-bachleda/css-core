@@ -1,0 +1,436 @@
+//-------------------------------------------------------
+// General classes, utilities
+//-------------------------------------------------------
+@include base {
+  //-------------------
+  // Font weight
+  //-------------------
+  .light {
+    font-weight: $light !important;
+  }
+  .regular {
+    font-weight: $regular !important;
+  }
+  .bold {
+    font-weight: $bold !important;
+  }
+  //-------------------
+  // Font size
+  //-------------------
+  .font-size-12 {
+    font-size: px-to-rem(12px) !important;
+  }
+  .font-size-14 {
+    font-size: px-to-rem(14px) !important;
+  }
+  .font-size-16 {
+    font-size: px-to-rem(16px) !important;
+  }
+  .font-size-18 {
+    font-size: px-to-rem(18px) !important;
+  }
+  .font-size-20 {
+    font-size: px-to-rem(20px) !important;
+  }
+  .font-size-22 {
+    font-size: px-to-rem(22px) !important;
+  }
+  .font-size-24 {
+    font-size: px-to-rem(24px) !important;
+  }
+  //-------------------
+  // Font alignment
+  //-------------------
+  .text-left {
+    text-align: left !important;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+  .text-right {
+    text-align: right !important;
+  }
+  .text-justify {
+    text-align: justify !important;
+  }
+  //-------------------
+  // Font utilities
+  //-------------------
+  .uppercase {
+    text-transform: uppercase;
+  }
+  //-------------------
+  // Element alignment
+  //-------------------
+  .vertical-middle {
+    vertical-align: middle !important;
+  }
+  .vertical-top {
+    vertical-align: top !important;
+  }
+  .vertical-bottom {
+    vertical-align: bottom !important;
+  }
+  //-------------------
+  // Display properties
+  //-------------------
+  .block {
+    display: block !important;
+  }
+  .inline-block {
+    display: inline-block !important;
+  }
+  .table {
+    display: table !important;
+  }
+  .table-row {
+    display: table-row !important;
+  }
+  .table-cell {
+    display: table-cell !important;
+  }
+  .flex {
+    display: flex !important;
+  }
+  .inline-flex {
+    display: inline-flex !important;
+  }
+  //-------------------
+  // Flex properties
+  //-------------------
+  .flex-wrap {
+    flex-wrap: wrap !important;
+  }
+  .direction-column {
+    flex-direction: column !important;
+  }
+  .grow-1 {
+    flex-grow: 1 !important;
+  }
+  .grow-0 {
+    flex-grow: 0 !important;
+  }
+  .basis-0 {
+    flex-basis: 0 !important;
+  }
+  .basis-100 {
+    flex-basis: 100% !important;
+  }
+  .basis-50 {
+    flex-basis: 50% !important;
+  }
+  .shrink-1 {
+    flex-shrink: 1 !important;
+  }
+  .shrink-0 {
+    flex-shrink: 0 !important;
+  }
+  .align-center {
+    align-items: center !important;
+  }
+  .align-start {
+    align-items: flex-start !important;
+  }
+  .align-end {
+    align-items: flex-end !important;
+  }
+  .justify-center {
+    justify-content: center !important;
+  }
+  .justify-start {
+    justify-content: flex-start !important;
+  }
+  .justify-end {
+    justify-content: flex-end !important;
+  }
+  .justify-between {
+    justify-content: space-between !important;
+  }
+  .justify-around {
+    justify-content: space-around !important;
+  }
+  .self-center {
+    align-self: center !important;
+  }
+  .self-start {
+    align-self: flex-start !important;
+  }
+  .self-end {
+    align-self: flex-end !important;
+  }
+  //-------------------
+  // Position
+  //-------------------
+  .relative {
+    position: relative !important;
+  }
+  //-------------------
+  // Overflow
+  //-------------------
+  .overflow-hidden {
+    overflow: hidden !important;
+  }
+  .overflow-auto {
+    overflow: auto !important;
+  }
+  //-------------------
+  // Z-index
+  //-------------------  
+  .z-index-1 {
+    z-index: 1 !important;
+  }
+  //-------------------
+  // Margins 0
+  //-------------------
+  .m-0 {
+    margin: 0 !important;
+  }
+  .mv-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .mh-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  //-------------------------
+  // Margins
+  //-------------------------
+  .m {
+    margin: $base-space !important;
+  }
+  .mv {
+    margin-top: $base-space !important;
+    margin-bottom: $base-space !important;
+  }
+  .mh {
+    margin-left: p$base-space!important;
+    margin-right: $base-space !important;
+  }
+  .mt {
+    margin-top: $base-space !important;
+  }
+  .mr {
+    margin-right: p$base-space!important;
+  }
+  .mb {
+    margin-bottom: $base-space !important;
+  }
+  .ml {
+    margin-left: $base-space !important;
+  }
+  //-------------------
+  // Paddings 0
+  //-------------------
+  .p-0 {
+    padding: 0 !important;
+  }
+  .pv-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .ph-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  //-------------------------
+  // Paddings
+  //-------------------------
+  .p {
+    padding: $base-space !important;
+  }
+  .pv {
+    padding-top: $base-space !important;
+    padding-bottom: $base-space !important;
+  }
+  .ph {
+    padding-left: p$base-space!important;
+    padding-right: $base-space !important;
+  }
+  .pt {
+    padding-top: $base-space !important;
+  }
+  .pr {
+    padding-right: p$base-space!important;
+  }
+  .pb {
+    padding-bottom: $base-space !important;
+  }
+  .pl {
+    padding-left: $base-space !important;
+  }   
+  //-------------------
+  // Floats
+  //-------------------
+  .fl-l {
+    float: left !important;
+  }
+  .fl-r {
+    float: right !important;
+  }
+  .clearfix {
+    &::after,
+    &::before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  //-------------------
+  // Visibility classes
+  //-------------------
+  .hide {
+    display: none !important;
+    &\@xs {
+      @media(max-width: ($screen-sm - 1/16)) {
+        display: none !important;
+      }
+    }
+    &\@sm {
+      @media(min-width: $screen-sm) and (max-width: ($screen-md - 1/16)) {
+        display: none !important;
+      }
+    }
+    &\@md {
+      @media(min-width: $screen-md) and (max-width: ($screen-lg - 1/16)) {
+        display: none !important;
+      }
+    }
+    &\@lg {
+      @media(min-width: $screen-lg) {
+        display: none !important;
+      }
+    }
+  }
+  //-------------------
+  // Colors
+  //-------------------
+  .white {
+    color: $white !important;
+  }
+  .black {
+    color: $black !important;
+  }
+  .yellow {
+    color: $yellow !important;
+  }
+  .red {
+    color: $red !important;
+  }
+  .blue {
+    color: $blue !important;
+  }
+  .green {
+    color: $green !important;
+  }
+  .gray {
+    color: $gray !important;
+  }
+  //-----------------------------------
+  // Just & only one 'line...' for text 
+  //-----------------------------------
+  .one-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  //---------------------------------
+  // Hide browser selection color 
+  //---------------------------------
+  .select-none {
+    ::-moz-selection {
+      background: transparent;
+      color: inherit;
+    }
+    ::selection {
+      background: transparent;
+      color: inherit;
+    }
+  }
+  //----------------------------
+  // Width
+  //----------------------------
+  @for $i from 0 through 30 {
+    .w-#{$i} {
+      width: #{$i}rem !important;
+    }
+    .w-#{$i}\.5 {
+      width: #{$i + 0.5}rem !important;
+    }
+    .w-min-#{$i} {
+      min-width: #{$i}rem !important;
+    }
+    .w-max-#{$i} {
+      max-width: #{$i}rem !important;
+    }
+  }
+  .w-full {
+    width: 100% !important;
+  }
+  .w-auto {
+    width: auto !important;
+  }
+  .w-max-full {
+    max-width: 100% !important;
+  }
+  //----------------------------
+  // Height
+  //----------------------------
+  @for $i from 0 through 30 {
+    .h-#{$i} {
+      height: #{$i}rem !important;
+    }
+    .h-#{$i}\.5 {
+      height: #{$i + 0.5}rem !important;
+    }
+    .h-min-#{$i} {
+      min-height: #{$i}rem !important;
+    }
+    .h-max-#{$i} {
+      max-height: #{$i}rem !important;
+    }
+  }
+  .h-full {
+    height: 100% !important;
+  }
+  .h-auto {
+    height: auto !important;
+  }
+  .h-max-full {
+    max-height: 100% !important;
+  }
+  //----------------------------
+  // Utility classes
+  //----------------------------
+  .pointer {
+    cursor: pointer;
+  }
+  .help {
+    cursor: help;
+  }
+  //----------------------------
+  // Rotate Elements
+  //----------------------------
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+}
+//-------------------
+// Dynamic colors
+//-------------------  
+@include style {
+  //---------
+  // Colors
+  //---------
+  .blue-yellow {
+    @include light {
+      color: $blue;
+    }
+    @include dark {
+      color: $yellow;
+    }
+  }
+}

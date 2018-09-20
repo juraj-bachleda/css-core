@@ -1,0 +1,13 @@
+//--------------------------------------------------------------
+// Spacer helps to bring a space between elements that can stack
+//--------------------------------------------------------------
+@include base {
+  .spacer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: px-to-rem(-4px);
+  }
+  .spacer__item {
+    padding: px-to-rem(4px);
+  }
+}

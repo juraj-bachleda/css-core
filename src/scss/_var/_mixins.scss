@@ -1,0 +1,46 @@
+//--------------------------------
+// Global mixins here
+//--------------------------------
+
+//---------------------------------
+// Mixin for layout base properties
+//---------------------------------
+@mixin base {
+  @if ( $output=='base') {
+    @content;
+  }
+}
+//---------------------------------
+// Mixin for both style properties
+//---------------------------------
+@mixin style {
+  @if ( $output=='dark' or $output=='light') {
+    @content;
+  }
+}
+//---------------------------------
+// Mixin for both dark style
+//---------------------------------
+@mixin dark {
+  @if ( $output=='dark') {
+    @content;
+  }
+}
+//---------------------------------
+// Mixin for light style properties
+//---------------------------------
+@mixin light {
+  @if ( $output=='light') {
+    @content;
+  }
+}
+//-----------------------------------
+// Prefix for properties
+//-----------------------------------
+@mixin prefix($property, $value) {
+  -o-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -webkit-#{$property}: $value;
+  -ms-#{$property}: $value;
+  #{$property}: $value;
+}

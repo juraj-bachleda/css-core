@@ -1,0 +1,97 @@
+@include base {
+  //----------------------
+  // Typography
+  //----------------------
+  html {
+    font-family: $font-family;
+    font-size: $font-size-root;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    text-rendering: optimizeLegibility;
+    font-size: $font-size-base;
+    line-height: $line-height;
+  }
+  //--------------------
+  // Anchor link styles
+  //--------------------
+  a {
+    text-decoration: underline;
+    // Remove gaps in links underline in iOS 8+ and Safari 8+.
+    -webkit-text-decoration-skip: objects;
+    &:hover,
+    &:focus,
+    &:active {
+      outline-width: 0;
+      text-decoration: none;
+    } 
+  }
+  //----------
+  // Headings
+  //----------
+  h1, h2, h3 {
+    font-weight: $bold;
+    margin: 0;
+  }
+  h1, .h1 {
+    font-size: px-to-rem(32px);
+  }
+  h2, .h2 {
+    font-size: px-to-rem(24px);
+  }
+  h3, .h3 {
+    font-size: px-to-rem(20px);
+  }
+  h4, .h4 {
+    font-size: px-to-rem(18px);
+  }
+}
+//-------------------------------------------------------
+// END of Layout base
+//-------------------------------------------------------
+//-------------------------------------------------------
+// Styles
+//-------------------------------------------------------
+@include style {
+  //----------------------
+// Body Base Styles 
+//----------------------	
+  body {
+    @include light {
+      background-color: $white;
+      color: $black;
+    }
+    @include dark {
+      background-color: $black;
+      color: $white;
+    }
+  }
+  //--------------------
+  // Anchor link styles
+  //--------------------
+  a {
+    @include dark {
+      color: $yellow;
+    }
+    @include light {
+      color: $blue;
+    }
+  }
+  //----------------------
+  // Text selection styles
+  //----------------------
+  .selection,
+  ::selection {
+    @include dark {
+      opacity: 1;
+      color: $black;
+      background-color: $yellow;
+    }
+    @include light {
+      opacity: 1;
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}
