@@ -1,0 +1,114 @@
+@include base {
+  //-----------------------
+  // Button <a> or <button>
+  //-----------------------
+  .button {
+    align-items: center;
+    position: relative;
+    border: 1px solid $blue; //fallback color for border gradient
+    border-image: $button-gradient;
+    border-image-slice: 1;
+    display: inline-flex;
+    height: 3rem;
+    max-width: 100%;
+    padding: .25rem .75rem;
+    overflow: hidden;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    text-shadow: $black 1px 1px 0;
+    cursor: pointer;
+    transition: background .3s $transition-timing;
+    //------------------
+    // Button background
+    //------------------
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0px;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      background-image: $button-gradient;
+      background-size: 101%; //fix for 1px chrome bad calc
+      transition: opacity .3s $transition-timing;
+    }
+    //------------------------------
+    // Button background - show only
+    //------------------------------
+    &:hover,
+    &:focus {
+      &::before {
+        opacity: 1;
+      }
+    }
+    //---------------------------
+    // Button outline - show only
+    //---------------------------
+    &:focus {
+      outline: 3px dashed #565656;
+    }
+  }
+    //-----------------
+    // Secondary button
+    //-----------------
+  .button--secondary {
+    background: $gray;
+    border: none;
+    box-shadow: -2px -2px 0 0 darken($gray,5) inset, 2px 2px 0 0 lighten($gray,5) inset;
+    &::before {
+      background-color: $blue;
+      box-shadow: -2px -2px 0 0 darken($blue,10) inset, 2px 2px 0 0 lighten($blue,10) inset;
+      background-image: none;
+      border-image: none;
+    }
+    //--------------
+    // Button active
+    //--------------
+    &:active::before {
+      box-shadow: 2px 2px 0 0 #006ace inset, -2px -2px 0 0 #3092ed inset;
+    }
+  }
+  //-----------------------
+  // Button text (optional)
+  //-----------------------
+  .button__text {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 -1px 0 0 white inset;
+    transition: box-shadow .3s $transition-timing;
+    .button:hover &,
+    .button:focus & {
+      box-shadow: none;
+    }
+  }
+  //-----------------------
+  // Button icon (optional)
+  //-----------------------
+  .button__icon {
+    position: relative;
+  }
+}
+//------------
+// END of base
+//------------
+
+@include style {
+  //--------------
+  // Button Styles 
+  //--------------
+    @include light {
+      //button only light styles
+    }
+    @include dark {
+      //button only dark styles
+    }
+}
+//-------------
+// END of style
+//-------------

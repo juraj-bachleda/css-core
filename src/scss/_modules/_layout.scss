@@ -6,8 +6,41 @@
     margin: 0;
   }  
   .main {
-    display: flex;
-    height: 100vh;
-    background: $red;
+padding: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+    background: $dark-blue-l2; 
+  }
+  .box {
+    padding: 1rem;
+    background: $dark-blue-l;
+  }
+  .box--light {
+    padding: 1rem;
+    background: $dark-blue-l2;
+  }
+  .banner {
+    padding: 1rem;
+    background-image: linear-gradient(45deg, $dark-blue-d 0%, $dark-blue-l 100%);
   }
 }
+//------------
+// END of base
+//------------
+
+@include style {
+  //--------------
+  // Layout Styles 
+  //--------------
+    @include light {
+      //layout only light styles
+    }
+    @include dark {
+      //layout only dark styles
+    }
+}
+//-------------
+// END of style
+//-------------

@@ -1,36 +1,46 @@
+//------------------------------------------------------------------
+// when $output value is changed, different part of code is compiled
+// -----------------------------------------------------------------
 $output: 'base' !default;
-//----------------------------------------
+//-------
 // Colors
-//----------------------------------------
-$white: white;
-$gray: gray;
-$black: black;
-$green: green;
-$yellow: yellow;
-$blue: blue;
-$red: red;
-//---------------------
+//-------
+$white: #FFFFFF !default;
+$gray: #333644 !default;
+$black: #000000 !default;
+$green: #14aa70 !default;
+$yellow: #eada1b !default;
+$blue: #1080e9 !default;
+$violet: #563190 !default;
+$dark-blue-d: #111115 !default;
+$dark-blue: #18191d !default;
+$dark-blue-l: #1d1e24 !default;
+$dark-blue-l2: #21232b !default;
+$red: #d8465a !default;
+
+$button-gradient: linear-gradient(45deg, red 0%, #b00de0 40%, #06e0b4 98%) !default;
+//-----
 // Typo
-//---------------------
+//-----
 $font-size-root: 16px !default;
 $font-size-base: 1rem !default; //16px
 $line-height: 1.4 !default;
-$font-family: 'Roboto',Arial,sans-serif !default;
+$font-family: 'Source Sans Pro', sans-serif !default;
 $light: 300 !default;
 $regular: 400 !default;
 $bold: 700 !default;
-//---------------------
+//------------
 // Breakpoints
-//---------------------
+//------------
 $screen-xs: 0 !default; //mobile first
 $screen-sm: 30em !default; //480px
 $screen-md: 60em !default; //960px
 $screen-lg: 90em !default; //1440px
-//---------------------
+//--------
 // Spacing
-//---------------------
-$base-space: 0.5rem !default; //8px
-//---------------------
+//--------
+$base-space: 1rem !default; //8px
+//-----------
 // Transition
-//---------------------
+//-----------
 $transition-timing: cubic-bezier(0.250, 0.460, 0.450, 0.940) !default;
