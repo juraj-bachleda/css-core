@@ -2,18 +2,11 @@
 // Grid settings
 //--------------
 $grid-gutter-width: $base-space/2;
-$grid-breakpoints: ( 
-  xs: $screen-xs, 
-  sm: $screen-sm, 
-  md: $screen-md, 
-  lg: $screen-lg
-);
+$grid-breakpoints: ( xs: $screen-xs, sm: $screen-sm, md: $screen-md, lg: $screen-lg);
 $grid-columns-number: 12;
-
 //--------------
 // Grid mixins
 //--------------
-
 // ----------------------------------------------------
 // Set proper width and flex-basis for cols in the grid
 // ----------------------------------------------------
@@ -43,9 +36,9 @@ $grid-columns-number: 12;
   }
 }
 
-//-------------------------------------------------------
-// @base
-//-------------------------------------------------------
+//-----
+// Grid
+//-----
 @include base {
   .container {
     margin-right: auto;
@@ -58,11 +51,15 @@ $grid-columns-number: 12;
     flex-wrap: wrap;
     margin-right: - $grid-gutter-width;
     margin-left: - $grid-gutter-width;
+    margin-top: - $grid-gutter-width;
+    margin-bottom: - $grid-gutter-width;
   }
-  [class="^=col-"] {
+  [class*='col-'] {
     flex-grow: 1;
     padding-right: $grid-gutter-width;
     padding-left: $grid-gutter-width;
+    padding-top: $grid-gutter-width;
+    padding-bottom: $grid-gutter-width;
   }
   .col-xs,
   .col-sm,
@@ -74,27 +71,29 @@ $grid-columns-number: 12;
   // -------------------------------------------
   // Set widths, flex-basis and offset for cols
   // -------------------------------------------
-  @each $bp-prefix, $bp-value in $grid-breakpoints {
+  @each $bp-prefix,
+  $bp-value in $grid-breakpoints {
     @include include-grid-media-query-only-if-set($bp-value) {
-      //------------------------------
+      //----
       // Col
-      //------------------------------
+      //----
       @for $i from 1 through $grid-columns-number {
         .col-#{$bp-prefix}-#{$i} {
           @include calc-grid-cell-basis-and-width($i);
         }
       }
-      //------------------------------
+      //-----------
       // Offset Col
-      //------------------------------
+      //-----------
       @for $i from 0 through 11 {
         .col-#{$bp-prefix}-offset-#{$i} {
           @include calc-grid-cell-offset-margin($i);
         }
-      }    
+      }
     }
   }
 }
-//-------------------------------------------------------
-// END of @base
-//-------------------------------------------------------
+
+//------------
+// END of base
+//------------

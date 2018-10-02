@@ -1,10 +1,10 @@
-//-------------------------------------------------------
+//---------------------------
 // General classes, utilities
-//-------------------------------------------------------
+//---------------------------
 @include base {
-  //-------------------
+  //------------
   // Font weight
-  //-------------------
+  //------------
   .light {
     font-weight: $light !important;
   }
@@ -14,9 +14,9 @@
   .bold {
     font-weight: $bold !important;
   }
-  //-------------------
+  //----------
   // Font size
-  //-------------------
+  //----------
   .font-size-12 {
     font-size: px-to-rem(12px) !important;
   }
@@ -38,9 +38,9 @@
   .font-size-24 {
     font-size: px-to-rem(24px) !important;
   }
-  //-------------------
+  //---------------
   // Font alignment
-  //-------------------
+  //---------------
   .text-left {
     text-align: left !important;
   }
@@ -53,15 +53,15 @@
   .text-justify {
     text-align: justify !important;
   }
-  //-------------------
+  //---------------
   // Font utilities
-  //-------------------
+  //---------------
   .uppercase {
     text-transform: uppercase;
   }
-  //-------------------
+  //------------------
   // Element alignment
-  //-------------------
+  //------------------
   .vertical-middle {
     vertical-align: middle !important;
   }
@@ -95,11 +95,14 @@
   .inline-flex {
     display: inline-flex !important;
   }
-  //-------------------
+  //----------------
   // Flex properties
-  //-------------------
+  //----------------
   .flex-wrap {
     flex-wrap: wrap !important;
+  }
+  .no-wrap {
+       flex-wrap: nowrap !important;
   }
   .direction-column {
     flex-direction: column !important;
@@ -158,30 +161,30 @@
   .self-end {
     align-self: flex-end !important;
   }
-  //-------------------
+  //---------
   // Position
-  //-------------------
+  //---------
   .relative {
     position: relative !important;
   }
-  //-------------------
+  //---------
   // Overflow
-  //-------------------
+  //---------
   .overflow-hidden {
     overflow: hidden !important;
   }
   .overflow-auto {
     overflow: auto !important;
   }
-  //-------------------
+  //--------
   // Z-index
-  //-------------------  
+  //--------  
   .z-index-1 {
     z-index: 1 !important;
   }
-  //-------------------
+  //----------
   // Margins 0
-  //-------------------
+  //----------
   .m-0 {
     margin: 0 !important;
   }
@@ -193,9 +196,9 @@
     margin-left: 0;
     margin-right: 0;
   }
-  //-------------------------
+  //--------
   // Margins
-  //-------------------------
+  //--------
   .m {
     margin: $base-space !important;
   }
@@ -219,9 +222,9 @@
   .ml {
     margin-left: $base-space !important;
   }
-  //-------------------
+  //-----------
   // Paddings 0
-  //-------------------
+  //-----------
   .p-0 {
     padding: 0 !important;
   }
@@ -233,9 +236,9 @@
     padding-left: 0;
     padding-right: 0;
   }
-  //-------------------------
+  //---------
   // Paddings
-  //-------------------------
+  //---------
   .p {
     padding: $base-space !important;
   }
@@ -259,9 +262,9 @@
   .pl {
     padding-left: $base-space !important;
   }   
-  //-------------------
+  //-------
   // Floats
-  //-------------------
+  //-------
   .fl-l {
     float: left !important;
   }
@@ -302,9 +305,9 @@
       }
     }
   }
-  //-------------------
+  //-------
   // Colors
-  //-------------------
+  //-------
   .white {
     color: $white !important;
   }
@@ -334,9 +337,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  //---------------------------------
+  //-----------------------------
   // Hide browser selection color 
-  //---------------------------------
+  //-----------------------------
   .select-none {
     ::-moz-selection {
       background: transparent;
@@ -347,9 +350,9 @@
       color: inherit;
     }
   }
-  //----------------------------
+  //------
   // Width
-  //----------------------------
+  //------
   @for $i from 0 through 30 {
     .w-#{$i} {
       width: #{$i}rem !important;
@@ -373,9 +376,9 @@
   .w-max-full {
     max-width: 100% !important;
   }
-  //----------------------------
+  //-------
   // Height
-  //----------------------------
+  //-------
   @for $i from 0 through 30 {
     .h-#{$i} {
       height: #{$i}rem !important;
@@ -399,18 +402,18 @@
   .h-max-full {
     max-height: 100% !important;
   }
-  //----------------------------
+  //----------------
   // Utility classes
-  //----------------------------
+  //----------------
   .pointer {
     cursor: pointer;
   }
   .help {
     cursor: help;
   }
-  //----------------------------
+  //----------------
   // Rotate Elements
-  //----------------------------
+  //----------------
   .rotate-90 {
     transform: rotate(90deg);
   }
@@ -418,13 +421,17 @@
     transform: rotate(180deg);
   }
 }
-//-------------------
+//------------
+// END of base
+//------------  
+
+//---------------
 // Dynamic colors
-//-------------------  
+//---------------  
 @include style {
-  //---------
+  //-------
   // Colors
-  //---------
+  //-------
   .blue-yellow {
     @include light {
       color: $blue;

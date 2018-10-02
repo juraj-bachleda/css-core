@@ -1,7 +1,7 @@
 @include base {
-  //----------------------
+  //-----------
   // Typography
-  //----------------------
+  //-----------
   html {
     font-family: $font-family;
     font-size: $font-size-root;
@@ -13,9 +13,9 @@
     font-size: $font-size-base;
     line-height: $line-height;
   }
-  //--------------------
+  //-------------------
   // Anchor link styles
-  //--------------------
+  //-------------------
   a {
     text-decoration: underline;
     // Remove gaps in links underline in iOS 8+ and Safari 8+.
@@ -23,14 +23,17 @@
     &:hover,
     &:focus,
     &:active {
-      outline-width: 0;
       text-decoration: none;
-    } 
+    }
+    &:focus {
+      outline: 3px dashed #565656;
+    }
   }
-  //----------
+  //---------
   // Headings
-  //----------
-  h1, h2, h3 {
+  //---------
+  h1, h2, h3, h4,
+  .h1, .h2, .h3, .h4{
     font-weight: $bold;
     margin: 0;
   }
@@ -47,29 +50,27 @@
     font-size: px-to-rem(18px);
   }
 }
-//-------------------------------------------------------
-// END of Layout base
-//-------------------------------------------------------
-//-------------------------------------------------------
-// Styles
-//-------------------------------------------------------
+//------------
+// END of base
+//------------
+
 @include style {
-  //----------------------
-// Body Base Styles 
-//----------------------	
+  //-----------------
+  // Body Base Styles 
+  //-----------------	
   body {
     @include light {
       background-color: $white;
       color: $black;
     }
     @include dark {
-      background-color: $black;
+      background-color: $dark-blue;
       color: $white;
     }
   }
-  //--------------------
+  //-------------------
   // Anchor link styles
-  //--------------------
+  //-------------------
   a {
     @include dark {
       color: $yellow;
@@ -84,14 +85,17 @@
   .selection,
   ::selection {
     @include dark {
-      opacity: 1;
+      opacity: .8;
       color: $black;
       background-color: $yellow;
     }
     @include light {
-      opacity: 1;
+      opacity: .8;
       color: $white;
       background-color: $blue;
     }
   }
 }
+//-------------
+// END of style
+//-------------
